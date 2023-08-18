@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "target": "ES6",
+        "esModuleInterop": true,
+        "ignoreDeprecations": "5.0",
+        "module": "CommonJS",
+        "strict": true,
+        "noImplicitAny": false,
+        "outDir": "dist"
+    },
+    "files.exclude": {
+      "**/.git": true,
+      "**/.svn": true,
+      "**/.hg": true,
+      "**/.DS_Store": true,
+      "**/node_modules": true,
+      "**/*.js": {
+        "when": "$(basename).ts"
+      },
+      "**/*.js.map": true
+    },
+}
