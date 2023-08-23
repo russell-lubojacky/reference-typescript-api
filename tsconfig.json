@@ -18,5 +18,5 @@
         "when": "$(basename).ts"
       },
       "**/*.js.map": true
-    },
+    }
 }

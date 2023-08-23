@@ -11,13 +11,11 @@ class TrailRepository {
     }
 
     async createTrail(trailData: CreateTrailRequest): Promise<Trail> {
-        const newTrail = await Trail.create({
+        return await Trail.create({
             name: trailData.name,
             difficulty: trailData.difficulty,
             length: trailData.length
         });
-
-        return newTrail;
     }
 
     deleteTrail(id: string) {

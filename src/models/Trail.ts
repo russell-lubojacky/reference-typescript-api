@@ -23,3 +23,5 @@ Trail.init(
        timestamps: false
     }
 )
+
+export default Trail;
