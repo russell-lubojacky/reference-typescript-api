@@ -6,8 +6,8 @@ class TrailRepository {
         return Trail.findAll(options);
     }
 
-    getTrailByID(id: string) {
-        return Trail.findByPk(id);
+    async getTrailByID(id: string): Promise<Trail | null> {
+        return await Trail.findByPk(id);
     }
 
     async createTrail(trailData: CreateTrailRequest): Promise<Trail> {

@@ -17,7 +17,11 @@ const getTrailById = async (req: Request, res: Response) => {
     try {
         if (uuidValidate(req.params.id)) {
             const trail = await TrailsRepository.getTrailByID(req.params.id);
-            res.json(trail);
+            if (trail) {
+                res.status(200).json(trail);
+            } else {
+                res.status(404).json({ message: `Trail not found: ${req.params.id}`});
+            }
         } else {
             res.status(400).json({
                 error: `ID is not a valid UUID: ${req.params.id}`
